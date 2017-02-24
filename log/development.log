@@ -4798,3 +4798,493 @@ ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.
   Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (147.7ms)
+
+
+Started GET "/" for ::1 at 2017-02-24 13:50:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (22.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mPin Exists (28.1ms)[0m  SELECT  1 AS one FROM "pins" LIMIT 1
+  [1m[36mPin Load (17.7ms)[0m  [1mSELECT "pins".* FROM "pins"  ORDER BY created_at DESC[0m
+  Rendered pins/index.html.erb within layouts/application (11435.0ms)
+Completed 200 OK in 11938ms (Views: 11812.7ms | ActiveRecord: 46.3ms)
+
+
+Started GET "/assets/style.self-b7344719665b29b189920f5d4917c45f9f2b3c3ee2645d02011573db987583e1.css?body=1" for ::1 at 2017-02-24 13:50:35 +0300
+
+
+Started GET "/assets/application.self-7ab4dfd94865a4ef591abea73008b2bf78b136c25064ef6c72cc277c4c7cf70b.css?body=1" for ::1 at 2017-02-24 13:50:35 +0300
+
+
+Started GET "/assets/application.self-f3c2c00bdc6373caa80b052581c3f84ff15d9a5132cc11047d9bf123a0841238.js?body=1" for ::1 at 2017-02-24 13:50:36 +0300
+
+
+Started GET "/images/intro-2.jpg" for ::1 at 2017-02-24 13:50:36 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/images/intro-2.jpg"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7d822840-f6bf-4647-8598-13e005107be9 (only available if report was successful)
+[Rollbar] Exception uuid saved in env: 7d822840-f6bf-4647-8598-13e005107be9
+
+ActionController::RoutingError (No route matches [GET] "/images/intro-2.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (230.9ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (581.1ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (708.9ms)
+
+
+Started GET "/fonts/Linearicons-Free.woff2?w118d" for ::1 at 2017-02-24 13:50:42 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/fonts/Linearicons-Free.woff2"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=c7858a4a-a841-45fd-abfe-578b5a8fb6de (only available if report was successful)
+[Rollbar] Exception uuid saved in env: c7858a4a-a841-45fd-abfe-578b5a8fb6de
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.woff2"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (133.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.2ms)
+
+
+Started GET "/fonts/Linearicons-Free.woff?w118d" for ::1 at 2017-02-24 13:50:43 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/fonts/Linearicons-Free.woff"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=dc566ae5-e143-4156-bdcf-ac34d6593e0f (only available if report was successful)
+[Rollbar] Exception uuid saved in env: dc566ae5-e143-4156-bdcf-ac34d6593e0f
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.woff"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (165.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (162.0ms)
+
+
+Started GET "/fonts/Linearicons-Free.ttf?w118d" for ::1 at 2017-02-24 13:50:45 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/fonts/Linearicons-Free.ttf"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=a1d69657-c1ba-4fb9-b3b1-d9e384c8063b (only available if report was successful)
+[Rollbar] Exception uuid saved in env: a1d69657-c1ba-4fb9-b3b1-d9e384c8063b
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.ttf"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.3ms)
+
+
+Started GET "/" for ::1 at 2017-02-24 14:27:12 +0300
+Processing by PinsController#index as HTML
+  [1m[35mPin Exists (0.9ms)[0m  SELECT  1 AS one FROM "pins" LIMIT 1
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT "pins".* FROM "pins"  ORDER BY created_at DESC[0m
+  Rendered pins/index.html.erb within layouts/application (144.6ms)
+Completed 200 OK in 6489ms (Views: 6477.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/images/intro-2.jpg" for ::1 at 2017-02-24 14:27:20 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/images/intro-2.jpg"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=1c0d7a44-e452-4337-8b21-4ca1ff7b6ba5 (only available if report was successful)
+[Rollbar] Exception uuid saved in env: 1c0d7a44-e452-4337-8b21-4ca1ff7b6ba5
+
+ActionController::RoutingError (No route matches [GET] "/images/intro-2.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (170.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (184.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (357.6ms)
+
+
+Started GET "/fonts/Linearicons-Free.woff2?w118d" for ::1 at 2017-02-24 14:27:23 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/fonts/Linearicons-Free.woff2"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=fe73f9d2-6dcc-4700-a42e-ae78a7c4281c (only available if report was successful)
+[Rollbar] Exception uuid saved in env: fe73f9d2-6dcc-4700-a42e-ae78a7c4281c
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.woff2"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (391.0ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (110.1ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (253.3ms)
+
+
+Started GET "/fonts/Linearicons-Free.woff?w118d" for ::1 at 2017-02-24 14:27:25 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/fonts/Linearicons-Free.woff"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7dd101cb-ca46-4f3a-b5c8-7bbf1eb15bcd (only available if report was successful)
+[Rollbar] Exception uuid saved in env: 7dd101cb-ca46-4f3a-b5c8-7bbf1eb15bcd
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.woff"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (83.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (191.6ms)
+
+
+Started GET "/fonts/Linearicons-Free.ttf?w118d" for ::1 at 2017-02-24 14:27:28 +0300
+[Rollbar] Reporting exception: No route matches [GET] "/fonts/Linearicons-Free.ttf"
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found: 33e2514fc4e249a4b222a966f8584de7"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=35d5691f-c697-4c49-b5ba-6fc4b61a3f15 (only available if report was successful)
+[Rollbar] Exception uuid saved in env: 35d5691f-c697-4c49-b5ba-6fc4b61a3f15
+
+ActionController::RoutingError (No route matches [GET] "/fonts/Linearicons-Free.ttf"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (2.12.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+  puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+  puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+  puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+
+
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (187.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (88.2ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Ahmed/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (219.9ms)

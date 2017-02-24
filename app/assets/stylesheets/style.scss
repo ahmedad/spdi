@@ -10,9 +10,9 @@ body{
 
 p{  
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 12.5px;
     line-height: 20px;
-    font-weight: 800;
+    font-weight: 100;
 }
 
 *{
@@ -52,7 +52,7 @@ h2.section-title{
     text-transform: uppercase;
     color: #131313;
     margin-top: 0; 
-    margin-bottom: -70px;
+    margin-bottom: 30px;
     word-spacing: 5px; 
     font-size: 30px;
     font-weight: 700;  
@@ -109,21 +109,21 @@ h2.section-title{
 .service-overflow,
 .intro{
     display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
 }
 
 /*===== header ====*/
@@ -521,7 +521,7 @@ h2.section-title{
 /*===== intro ====*/
 .intro{
     height: 650px;
-    background: asset-url('intro-2.jpg') no-repeat scroll center top/ cover;
+    background: url("../images/intro-2.jpg") no-repeat scroll center top/ cover;
 }
 
 .intro-content > h1{
@@ -538,10 +538,12 @@ h2.section-title{
     margin-left: 5px;
 }
 
-.intro-content > h3{
+.intro-content > p{
     color: #f8f8f8;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 570px;
 }
 
 .intro .carousel-indicators {
@@ -727,7 +729,6 @@ section.recent-event{
 
 .four-slide .single-slide img{
     width: 100%;
-    height: 30rem;
 }
 
 .single-slide{
@@ -1060,25 +1061,3 @@ strong.expert-tag{
     height: 35px; 
     font-size: 16px;
 }
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  /* max-width: 100%; */
-  height: auto;
-  line-height: 1;
-  width: 100%;
-}
-.col-md-6 , .col-xs-12 {
-  position: relative;
-  min-height: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-hr {
-  margin-top: 20px;
-  margin-bottom: 0px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
-}
-
