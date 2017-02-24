@@ -521,7 +521,7 @@ h2.section-title{
 /*===== intro ====*/
 .intro{
     height: 650px;
-    background: url("../images/intro-2.jpg") no-repeat scroll center top/ cover;
+    background: asset-url('intro-2.jpg') no-repeat scroll center top/ cover;
 }
 
 .intro-content > h1{
