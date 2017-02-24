@@ -1,0 +1,17 @@
+<div class="col-md-10 col-offset-2">
+  <div class="row">
+    <div class="panel panel-defualt">
+      <div class="panel-heading">
+        <h1>New profile</h1>
+      </div>
+      <div class="panel-body">
+        <strong>Current Image</strong>
+        <br/>
+        <%= image_tag @pin.image.url(:medium) %>
+        <br/>
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+

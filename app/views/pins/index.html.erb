@@ -1,0 +1,296 @@
+<hr style="margin-bottom: 0px;">
+    <!--======== intro =========-->
+        <section class="intro">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="intro-content text-center">
+                                    <h1>Mission</h1>
+                                    <h3>To offer peace solutions advice to war related problems facing the people of the horn of Africa by promoting peace and reconciliation and thereby stopping the spread of conflicts</h3>
+                                    <a class="btn btn-default" href="#" role="button">Read More <i class="lnr lnr-chevron-right"></i></a>
+                                    <a class="btn btn-primary scroll" href="#what-we-do" href="#" role="button">Get Started <i class="lnr lnr-chevron-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="intro-content text-center">
+                                    <h1>Vission</h1>
+                                    <h3>To strive and make Somali Peace Development Integration an efficient service provider in promoting peace and reconciliation in the horn of Africa.</h3>
+                                    <a class="btn btn-default" href="#" role="button">Read More <i class="lnr lnr-chevron-right"></i></a>
+                                    <a class="btn btn-primary scroll" href="#what-we-do" role="button">Get Started <i class="lnr lnr-chevron-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="intro-content text-center">
+                                    <h1>Motto</h1>
+                                    <h3>The motto of war is to let the strong survive and the weak die while for peace it letting the strong help the weak in the society among us.</h3>
+                                    <a class="btn btn-default" href="#" role="button">Read More <i class="lnr lnr-chevron-right"></i></a>
+                                    <a class="btn btn-primary scroll" href="#what-we-do" href="#" role="button">Get Started <i class="lnr lnr-chevron-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--======== end intro =========-->
+        <!--======news=======-->
+        <section class="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center">
+                        <h1>Lasoco wararkeena</h1><div class="border center-block"></div>
+                    </div>
+                </div>  
+            </div>  
+        <div class="item">
+            <div class="container">
+                <%if @pins.exists? %>
+                    <% @pins.each_slice(3) do |pin| %>
+                    <div class="row">
+                        <% @pins.each do |pin| %>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="post">
+                                <div class="news-thumb">
+                                    <%= image_tag pin.image.url, width: '100%'%>
+                                    <div class="news-overlay"><i class="fa fa-link"></i></div>
+                                </div>  
+                                <div class="post-content">
+                                    <h4 class="media-heading"><%= pin.title %></h4>
+                                    <h5>posted on <%= pin.created_at.to_time.strftime('%B %e at %l: %M %p') %></h5>
+                                    <%= raw pin.description.truncate(200) %>
+                                    <%= link_to 'Read More', pin_path(pin), class: 'btn btn-default' %>
+                                </div>
+                              </div>
+                            </div>
+                           <% end %>
+                          </div>
+                          <% end %>
+                        <% else %>
+                        <p></p>
+                    <% end %>
+            </div>
+         </div>
+        </section>
+
+        <!--======endNews=====-->
+    <!--======== what we do =========-->
+    <hr />
+        <section id="what-we-do" class="what-we-do">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">                
+                        <p class="small-tag">We are awesome</p>
+                        <h2 class="section-title">What we do</h2>
+                        <div class="border"><span class="border-l-r"><i class="lnr lnr-diamond"></i></span></div>
+                        <h4 class="section-para">We offer professional training and help the all matters mentioned below</h4>
+                    </div>
+                </div>   
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="do-box text-center">
+                                    <i class="lnr lnr-leaf"></i>
+                                    <h3>Peace </h3>
+                                    <p>Bringing conflicting parties together, opening channels of communication and helping to broker a ceasefire or peace agreement</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="do-box bg-color text-center">
+                                    <i class="lnr lnr-users"></i>
+                                    <h3>Reconcilition</h3>
+                                    <p> By generally understanding the reestablishment of friendly relations, though it assumes different forms and roles in different contexts. In the case of armed conflicts, reconciliation incorporates the search for truth, justice, forgiveness and accommodation between conflicting groups or people.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="do-box text-center">
+                                    <i class="lnr lnr-cog"></i>
+                                    <h3>Development</h3>
+                                    <p> To promote income generating activities and create vocational skills for the youngsters, women, and IDPs to become self-sufficient and reduce the level of poverty living.</p>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>   
+                </div>   
+            </div>
+        </section>
+        <!--======== end what we do =========-->
+
+        <!--======== about us =========-->
+        <section class="about-us">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 p-l-r-0">
+                        <div id="about" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <%= image_tag('img1.jpg') %>
+                                </div>
+                                <div class="item">
+                                    <%= image_tag('img2.jpeg') %>
+                                </div>
+                                <div class="item">
+                                    <%= image_tag('about-us-1.jpg') %>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="about-content">
+                            <h1 class="section-title" style="color: aliceblue;">Our hope</h1>
+                            <h3 style="color: aliceblue;">Our hope is to see somalia with a central government which is living in peace and harmony with developemnt in all sectors including education, health, agriculture, marine e.t.c.</h3>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--======== end about us =========-->
+        
+        <!--======== our service =========-->
+        <section id="service" class="our-service">
+            <div class="ccontainer">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">                
+                        <p class="small-tag">What we offer</p>
+                        <h2 class="section-title">Our Services</h2>
+                        <div class="border"><span class="border-l-r"><i class="lnr lnr-diamond"></i></span></div>
+                        <p class="section-para">We give all these and more trainings in for our society</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="four-slide">
+                            <div class="single-slide"><%= image_tag('peace.png') %>
+                                <div class="service-overflow text-center">
+                                    <h3>Peace Trainings</h3>
+                                    <p>For the youth and the elders</p>
+                                </div>
+                            </div>
+                            <div class="single-slide"><%= image_tag('recon.png') %>
+                                <div class="service-overflow text-center">
+                                    <h3>Reconciliation traings</h3>
+                                    <p>This is to deal with conflicting parties in the society</p>
+                                </div>
+                            </div>
+                            <div class="single-slide"><%= image_tag('developent.png') %>
+                                <div class="service-overflow text-center">
+                                    <h3>Development Traing</h3>
+                                    <p>Trainings on how to sustain and gen.</p>
+                                </div>
+                            </div>
+                            <div class="single-slide"><%= image_tag('med.png') %>
+                                <div class="service-overflow text-center">
+                                    <h3>Mediation and Arbitration Trainings</h3>
+                                    <p>How to resolve problems using those methods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <!--======== end our service =========-->
+        
+        <!--======== our expets =========-->
+        <section id="team" class="our-experts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-6 col-xs-12"> 
+                        <h2 class="section-title">Hard Worker</h2>
+                        <h4 style="margin-top: 12rem;">We have professional team who are dedicated to help and bring about change in the country</h4>
+                    </div>
+                    <div class="col-md-8" style="float: right; margin-right: -17rem; margin-top: -11rem;">
+                        <div class="three-slide">
+                            <div class="single-slide">
+                                <%= image_tag "founder.jpg", class: "img-circle" %>
+                                <div class="text-center">
+                                    <h3 class="expert-name">Abdulqadir</h3>
+                                    <strong class="expert-tag">Founder / CEO</strong>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <%= image_tag "founder2.jpg", class: "img-circle" %>
+                                <div class="text-center">
+                                    <h3 class="expert-name">Hibo</h3>
+                                    <strong class="expert-tag">Co - founder</strong>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <%= image_tag "founder3.jpg", class: "img-circle" %>
+                                <div class="text-center">
+                                    <h3 class="expert-name">Ahmed Abdirahman</h3>
+                                    <strong class="expert-tag">Co - founder </strong>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>    
+                </div>
+            </div>    
+        </section>
+        <!--======== end our expets =========-->
+        
+        <!--======== contact =========-->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                        
+                        <p class="small-tag">Ask Qestions</p>
+                        <h2 class="section-title">Contact Message</h2>
+                        <div class="border"><span class="border-l-r"><i class="fa fa-envelope-o"></i></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail3">Your Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail3">Your Email</label>
+                                    <input type="Email" class="form-control" id="exampleInputEmail3" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail3">Phone</label>
+                                    <input type="tel" class="form-control" id="exampleInputEmail3" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail3">Massage</label>
+                                    <textarea class="form-control textarea" rows="5" placeholder="Massage"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default btn-block">Send Massage</button>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!--======== end contact =========-->

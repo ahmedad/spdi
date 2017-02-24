@@ -1,0 +1,41 @@
+<hr />
+<% if user_signed_in? %>
+  <p id="intro">
+    Hello
+    <%= current_user.email %>
+    <br/>
+    <span>
+      Nala Qeybso Fikradada
+    </span>
+  </p>
+<% else %>
+  <p id="intro">
+    wamaxay fikradada?
+    <br/>
+    <span>
+      Nala Qeybso Fikradada
+    </span>
+  </p>
+<% end %>
+<div class="col-md-8 col-md-offset-2">
+	<div id="post_show">
+	  <div class="clearfix">
+	    <div class="post_image_description">
+	      <%= image_tag @pin.image.url(:medium) %>
+	      <h1>
+	        <%= @pin.title %>
+	      </h1>
+	      <div class="description">
+	        <%= simple_format(@pin.description) %>
+	      </div>
+	      <%= render 'disqus' %>
+	    </div>
+	    <div class="btn-group pull-right">
+	      <% if user_signed_in? && current_user == @pin.user %>
+	        <%= link_to "Edit", edit_pin_path, class: "btn btn-success" %>
+	        <%= link_to "Delete", pin_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+	      <% end %>
+	    </div>
+	  </div>
+	</div>
+</div>
